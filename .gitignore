@@ -1,0 +1,61 @@
+# ============================================
+# GitIgnore untuk Portfolio Website
+# File ini akan diabaikan oleh Git
+# ============================================
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# File sementara / backup
+*.tmp
+*.bak
+*.swp
+*~
+
+# Folder VS Code (jika ada)
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+
+# Folder editor (jika ada)
+.idea/
+*.sublime-*
+
+# Log files
+*.log
+
+# Node modules (jika ada project berbasis Node)
+node_modules/
+npm-debug.log*
+
+# File sensitif
+.env
+.env.local
+*.pem
+
+# File download/cache
+*.zip
+*.rar
+*.7z
+
+# Folder images jika ada screenshot pribadi
+# images/
+# screenshots/
+
+# File Adobe (jika ada)
+*.psd
+*.ai
+*.eps
+
+# File PDF besar
+# *.pdf
+
+# File Microsoft Office
+~$*.doc*
+*.xls*
+*.ppt*
+
+# Cache browser
+.cache/
