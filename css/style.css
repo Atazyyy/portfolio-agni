@@ -530,6 +530,52 @@ input, textarea {
 }
 
 /* ============================================
+   SKILLS GRID
+   ============================================ */
+
+.skills-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+  .skills-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skills Preview Cards */
+.skill-preview-card {
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.skill-preview-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.skill-preview-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.skill-preview-card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
    GRID SYSTEM
    ============================================ */
 
