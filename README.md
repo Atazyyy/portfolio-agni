@@ -1,38 +1,34 @@
 # Portfolio Website 🚀
 
-Personal portfolio website for **Agni Miftah Fauzi** - Electrical Engineering graduate with expertise in software development.
+Personal portfolio website for **Agni Miftah Fauzi** - AI Specialist & Automation Engineer specializing in Prompt Engineering, Claude API integration, and workflow automation.
 
 ![Portfolio Preview](https://via.placeholder.com/1200x600/0B0B0F/38BDF8?text=Portfolio+Agni)
 
 ## 👤 About Me
 
-Electrical Engineering fresh graduate (GPA 3.62/4.00) from UIN Sunan Gunung Djati Bandung with strong foundation in software development and system integration. Experienced in building mobile applications using Flutter and developing RESTful APIs with FastAPI, including AI-based receipt recognition using YOLOv8 and OCR.
+AI Specialist with hands-on experience in Prompt Engineering, Claude API integration, and automation pipelines. Passionate about building efficient workflows that scale research, automate repetitive tasks, and deliver reliable, validated outputs.
 
-**Open to opportunities in:**
-- Backend/Frontend Development
-- Mobile Application Development
-- Quality Assurance
-- IT Support
+**Open to roles in:**
+- AI Specialist / Prompt Engineer
+- Automation Engineer
+- Backend Developer (Python/FastAPI)
 
 ## 🛠️ Tech Stack
 
-### Mobile Development
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
-
-### Backend & Database
+### AI & Automation
+![Claude](https://img.shields.io/badge/Claude-20232?logo=anthropic&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+
+### Backend Development
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-### AI & Machine Learning
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-
-### Tools & Others
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
+### Frontend Development
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white)
 
 ## 📁 Project Structure
 
@@ -43,66 +39,53 @@ portfolio-agni/
 ├── projects.html           # All projects
 ├── experience.html         # Experience page
 ├── contact.html           # Contact page
-├── project-*.html         # Project detail pages
+├── projects/              # Project detail pages
+│   ├── promptcraft.html
+│   ├── atapdigital-ai.html
+│   ├── finance-app.html
+│   └── ...
 ├── css/
-│   ├── style.css          # Main styles
+│   ├── style.css          # Main styles + design system
 │   └── pages.css          # Page-specific styles
-└── js/
-    ├── main.js            # Main JavaScript
-    └── particles.js        # Particle animation
+├── js/
+│   └── main.js            # Core functionality
+├── sitemap.xml            # SEO sitemap
+└── robots.txt             # Search engine directives
 ```
 
 ## 📂 Featured Projects
 
-### 🏆 Personal Finance App (2026)
+### 🤖 PromptCraft (2026)
+Interactive learning platform for mastering Prompt Engineering with 12 lessons, 60+ quizzes, and prompt playground.
+
+**Tech Stack:** React, TypeScript, Tailwind CSS, Framer Motion
+- 12 Interactive Lessons
+- 60+ Quiz Questions
+- 15+ Prompt Templates
+- XP & Achievement System
+
+### ⚡ AtapDigital AI Prompt Library (2026)
+Web application with 12+ prompt templates for social media workflow automation.
+
+**Tech Stack:** Python, Flask, Claude API, Glassmorphism UI
+- Claude API Integration
+- PDF/Markdown Export
+- Real-time Preview
+
+### 📱 Personal Finance App (2026)
 Mobile application with automated receipt recognition using YOLOv8 and EasyOCR.
 
 **Tech Stack:** Flutter, YOLOv8, FastAPI, SQLite
 - **Accuracy:** 87% mAP50
 - **Usability:** 84 SUS Score (Excellent)
 
-### ⚡ RF Energy Harvesting System (2025)
-Multistage RF-to-DC converter designed to harvest ambient RF signals.
+## 🎯 Key Skills
 
-**Tech Stack:** Electronics, RF Systems, Circuit Design
-
-### 🌤 Weather Prediction RNN (2024)
-Recurrent Neural Network model for weather forecasting.
-
-**Tech Stack:** Python, TensorFlow, Keras
-
-### 📋 RFID Attendance System (2023)
-Web-based attendance system with NodeMCU ESP8266 and RFID RC522.
-
-**Tech Stack:** NodeMCU, RFID, MySQL, PHP
-
-### 🤖 Robotics Projects (2023)
-- Line Follower Robot
-- Sumo Robot
-
-## 📜 Experience
-
-### Work Experience
-| Company | Position | Period |
-|---------|----------|--------|
-| Drone Nation | Drone Technician | March 2026 - Present |
-| Freelance | IT Support & Technician | Jan 2021 - Present |
-| ITB LSKK | Bioreactor Intern | Jan - March 2024 |
-
-### Education
-| Institution | Degree | Period |
-|-------------|--------|--------|
-| UIN Sunan Gunung Djati Bandung | B.Sc. Electrical Engineering | Aug 2021 - Feb 2026 |
-| **GPA:** 3.62/4.00 | | |
-
-### Organizations
-- **Gerakan Mengajar Desa (GMD)** - Inspirational Tutor (2022-2023)
-- **BSO Robotika UIN SGD** - Staff of Communication & Information (2021-2023)
-
-## 📜 Certifications
-
-- **Cisco Introduction to Network** (Oct - Dec 2024)
-  - PTIPD UIN SGD Bandung x Lumina Eka Optima
+- **Prompt Engineering** - Designing effective prompts for consistent AI outputs
+- **Claude API Integration** - Building AI-powered workflows
+- **Automation Pipelines** - Converting repetitive tasks to scalable systems
+- **Quality Assurance** - Validating and documenting AI outputs
+- **Backend Development** - FastAPI, Flask, REST APIs
 
 ## 📬 Contact
 
@@ -110,16 +93,17 @@ Web-based attendance system with NodeMCU ESP8266 and RFID RC522.
 |----------|------|
 | 📧 Email | agnimiftahfauza@gmail.com |
 | 📱 Phone | +62 851-5689-3004 |
-| 💻 GitHub | [github.com/agnimiftah](https://github.com/agnimiftah) |
+| 💻 GitHub | [github.com/Atazyyy](https://github.com/Atazyyy) |
 | 💼 LinkedIn | [linkedin.com/in/agnimiftah](https://linkedin.com/in/agnimiftah) |
 | 📍 Location | Bandung, Indonesia |
 
 ## ✨ Features
 
-- 🌙 Dark theme with glassmorphism UI
+- 🌓 Dark/Light theme toggle
+- 📊 Scroll progress indicator
+- 🌙 Glassmorphism UI
 - 📱 Fully responsive design
 - ✨ Smooth scroll animations
-- 🎨 Modern glass card effects
 - 🔗 Social media links
 - 📝 Contact form
 - ⚡ Fast loading
@@ -128,7 +112,7 @@ Web-based attendance system with NodeMCU ESP8266 and RFID RC522.
 
 ```bash
 # Clone the repository
-git clone https://github.com/agnimiftah/portfolio-agni.git
+git clone https://github.com/Atazyyy/portfolio-agni.git
 
 # Open in browser
 # Just open index.html in your browser

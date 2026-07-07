@@ -1,0 +1,16 @@
+# Robots.txt for Portfolio Agni
+# https://atapdigital.id
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://atapdigital.id/sitemap.xml
+
+# Crawl-delay suggestion for polite bots
+Crawl-delay: 1
+
+# Block common crawler traps
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /api/

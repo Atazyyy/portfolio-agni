@@ -1,12 +1,48 @@
 /* ============================================
    MAIN.JS – Core Functionality
-   Navigation, Scroll Reveal, Glass Effects
+   Navigation, Scroll Reveal, Glass Effects,
+   Theme Toggle, Scroll Progress
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── THEME TOGGLE ──
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Check saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-theme');
+    if (themeToggle) {
+      themeToggle.querySelector('.theme-toggle-icon').textContent = '☀️';
+    }
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      const isLight = body.classList.contains('light-theme');
+      themeToggle.querySelector('.theme-toggle-icon').textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  }
+
+  // ── SCROLL PROGRESS ──
+  const scrollProgress = document.getElementById('scrollProgress');
+
+  function updateScrollProgress() {
+    if (!scrollProgress) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    scrollProgress.style.width = progress + '%';
+  }
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
   // ── NAVBAR SCROLL EFFECT ──
-  const navbar = document.querySelector('.navbar');
+  const navbar = document.getElementById('navbar');
   const navScrollThreshold = 50;
 
   function handleNavScroll() {
@@ -21,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
   handleNavScroll(); // Check initial state
 
   // ── MOBILE MENU TOGGLE ──
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {

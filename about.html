@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Agni Miftah Fauzi – Electrical Engineering graduate (GPA 3.62/4.00) with expertise in Flutter, FastAPI, and AI. Based in Bandung, Indonesia.">
+  <meta name="description" content="About Agni Miftah Fauzi – AI Specialist & Automation Engineer with expertise in Prompt Engineering, Claude API integration, and workflow automation. Based in Bandung, Indonesia.">
   <title>About | Agni Miftah Fauzi</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,14 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body class="page-transition">
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="theme-toggle-icon">🌙</span>
+  </button>
 
   <!-- NAVIGATION -->
   <nav class="navbar" id="navbar">
@@ -45,15 +55,16 @@
         <div class="about-bio reveal-right">
           <div class="section-label">About Me</div>
           <h1>Agni Miftah Fauzi</h1>
-          <p class="role">Electrical Engineering & Software Developer</p>
+          <p class="role">AI Specialist & Automation Engineer</p>
           <p class="bio-text">
-            Electrical Engineering fresh graduate (GPA 3.62/4.00) at Universitas Islam Negeri Sunan Gunung Djati Bandung
-            with strong foundation in software development and system integration. Experienced in building mobile applications
-            using Flutter and developing RESTful APIs with FastAPI, including AI-based receipt recognition using YOLOv8 and OCR.
+            AI Specialist with a passion for building efficient, automated workflows. I specialize in
+            <strong>Prompt Engineering</strong>, <strong>Claude API integration</strong>, and creating
+            <strong>automation pipelines</strong> that transform repetitive tasks into scalable systems.
           </p>
           <p class="bio-text">
-            Detail-oriented problem solver with both software and technical support experience, seeking entry-level roles in
-            Backend/Frontend Development, Mobile Application, Quality Assurance, or IT Support.
+            My approach combines technical skills with a strong focus on <strong>output quality</strong> and
+            <strong>reliability</strong>. I believe in validating AI outputs, documenting processes,
+            and building systems that teams can depend on.
           </p>
         </div>
       </div>
@@ -72,19 +83,23 @@
 
       <div class="about-story reveal">
         <p>
-          As an Electrical Engineering student at UIN Sunan Gunung Djati Bandung, I developed a strong foundation in
-          control systems, automation, and programming. My academic journey focused on combining hardware knowledge with
-          software skills to create integrated solutions.
+          My journey into AI began with a simple question: <em>"How can I make this repetitive task faster and more reliable?"</em>
+          This led me to explore prompt engineering, API integrations, and automation pipelines.
         </p>
         <p>
-          During my studies, I discovered my passion for software development, particularly in mobile applications and AI.
-          I pursued self-learning in Flutter, FastAPI, and machine learning, completing several projects that demonstrate
-          my ability to apply technical concepts to real-world problems.
+          I built <strong>PromptCraft</strong> — an interactive learning platform for mastering prompt engineering,
+          featuring 12 lessons, 60+ quizzes, and a prompt playground. This project taught me the nuances of
+          designing prompts that produce consistent, high-quality outputs.
         </p>
         <p>
-          Beyond academics, I gained practical experience through internships at ITB's Control and Computer Systems Lab,
-          worked as a drone technician, and provided freelance technical support. These experiences sharpened my
-          problem-solving abilities and taught me the value of systematic troubleshooting.
+          With <strong>AtapDigital AI Prompt Library</strong>, I developed a practical tool that generates
+          social media content using Claude API, demonstrating real-world workflow automation.
+        </p>
+        <p>
+          I'm drawn to the AI Specialist role at Nakama Creative Lab because it aligns perfectly with my interest in
+          <strong>research automation</strong>, <strong>internal tools development</strong>, and helping teams
+          <strong>work smarter with AI</strong>. I thrive in environments where I can apply computational thinking
+          to solve non-technical problems and make AI a client-facing value.
         </p>
       </div>
     </div>
@@ -103,34 +118,30 @@
 
       <div class="skills-grid" data-stagger>
 
-        <!-- Mobile Development -->
+        <!-- AI & Prompt Engineering -->
         <div class="glass-card skill-category reveal">
           <div class="glass-reflection"></div>
           <div class="glass-card-body">
             <h3>
-              <span class="cat-icon">📱</span>
-              Mobile Development
+              <span class="cat-icon">🤖</span>
+              AI & Prompt Engineering
             </h3>
             <div class="skill-list">
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Flutter
+                Prompt Engineering
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Dart
+                Claude API Integration
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                State Management
+                Output Validation
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                API Integration
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                CRUD Operations
+                AI Workflow Design
               </div>
             </div>
           </div>
@@ -151,7 +162,7 @@
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                REST API
+                Flask
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
@@ -159,56 +170,52 @@
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                SQLite
+                REST API Design
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Git (Basic)
+                SQLite
               </div>
             </div>
           </div>
         </div>
 
-        <!-- AI & Machine Learning -->
+        <!-- Automation & Scripts -->
         <div class="glass-card skill-category reveal">
           <div class="glass-reflection"></div>
           <div class="glass-card-body">
             <h3>
-              <span class="cat-icon">🤖</span>
-              AI & Machine Learning
+              <span class="cat-icon">⚡</span>
+              Automation & Scripts
             </h3>
             <div class="skill-list">
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Prompt Engineering
+                Python Automation
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Claude API
+                Workflow Pipelines
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                YOLOv8
+                API Integration
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                EasyOCR
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                RNN (Recurrent Neural Network)
+                Task Scheduling
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Web Development -->
+        <!-- Frontend Development -->
         <div class="glass-card skill-category reveal">
           <div class="glass-reflection"></div>
           <div class="glass-card-body">
             <h3>
               <span class="cat-icon">🌐</span>
-              Web Development
+              Frontend Development
             </h3>
             <div class="skill-list">
               <div class="skill-item">
@@ -225,110 +232,65 @@
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Flask
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                HTML/CSS/JS
+                HTML/CSS/JavaScript
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Technical Support -->
+        <!-- Machine Learning -->
         <div class="glass-card skill-category reveal">
           <div class="glass-reflection"></div>
           <div class="glass-card-body">
             <h3>
-              <span class="cat-icon">🔧</span>
-              Technical Support
+              <span class="cat-icon">🧠</span>
+              Machine Learning
             </h3>
             <div class="skill-list">
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Hardware Troubleshooting
+                YOLOv8
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Software Troubleshooting
+                EasyOCR
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                OS Installation
+                TensorFlow / Keras
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                System Optimization
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                Drone Maintenance
+                RNN / Time-Series
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Programming Languages -->
+        <!-- Quality & Process -->
         <div class="glass-card skill-category reveal">
           <div class="glass-reflection"></div>
           <div class="glass-card-body">
             <h3>
-              <span class="cat-icon">💻</span>
-              Programming Languages
+              <span class="cat-icon">🔍</span>
+              Quality & Process
             </h3>
             <div class="skill-list">
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Python
+                Output Validation
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                Dart
+                Documentation
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                C++
+                Testing & QA
               </div>
               <div class="skill-item">
                 <span class="skill-dot"></span>
-                JavaScript
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                HTML/CSS
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Networking -->
-        <div class="glass-card skill-category reveal">
-          <div class="glass-reflection"></div>
-          <div class="glass-card-body">
-            <h3>
-              <span class="cat-icon">🌐</span>
-              Networking
-            </h3>
-            <div class="skill-list">
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                TCP/IP
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                IP Addressing
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                Subnetting
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                Network Troubleshooting
-              </div>
-              <div class="skill-item">
-                <span class="skill-dot"></span>
-                Cisco Fundamentals
+                Error Handling
               </div>
             </div>
           </div>

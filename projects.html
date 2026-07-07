@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projects by Agni Miftah Fauzi – Mobile apps with Flutter, AI-based receipt recognition, IoT systems, and more.">
+  <meta name="description" content="Projects by Agni Miftah Fauzi – AI workflows, PromptCraft, AtapDigital AI, Flutter apps, and IoT systems showcasing expertise in AI integration and automation.">
   <title>Projects | Agni Miftah Fauzi</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,14 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body class="page-transition">
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="theme-toggle-icon">🌙</span>
+  </button>
 
   <!-- NAVIGATION -->
   <nav class="navbar" id="navbar">
@@ -55,7 +65,7 @@
       <div class="projects-grid" data-stagger>
 
         <!-- Project 1: PromptCraft -->
-        <a href="project-promptcraft.html" class="glass-card project-card reveal">
+        <a href="projects/promptcraft.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
@@ -74,7 +84,7 @@
         </a>
 
         <!-- Project 2: AtapDigital AI -->
-        <a href="project-atapdigital-ai.html" class="glass-card project-card reveal">
+        <a href="projects/atapdigital-ai.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #10b981, #059669);">
@@ -93,7 +103,7 @@
         </a>
 
         <!-- Project 3: Personal Finance App -->
-        <a href="project-detail.html" class="glass-card project-card reveal">
+        <a href="projects/finance-app.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3a5f, #0d1b2a);">
@@ -111,8 +121,8 @@
           </div>
         </a>
 
-        <!-- Project 2: RF Harvesting System -->
-        <a href="project-rf-harvesting.html" class="glass-card project-card reveal">
+        <!-- Project 4: RF Harvesting System -->
+        <a href="projects/rf-harvesting.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #2d1b4e, #1a0a2e);">
@@ -130,8 +140,8 @@
           </div>
         </a>
 
-        <!-- Project 3: Weather Prediction RNN -->
-        <a href="project-weather-rnn.html" class="glass-card project-card reveal">
+        <!-- Project 5: Weather Prediction RNN -->
+        <a href="projects/weather-rnn.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #1b3d3f, #0a2021);">
@@ -149,8 +159,8 @@
           </div>
         </a>
 
-        <!-- Project 4: RFID Attendance System -->
-        <a href="project-rfid-attendance.html" class="glass-card project-card reveal">
+        <!-- Project 6: RFID Attendance System -->
+        <a href="projects/rfid-attendance.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #3d2b1b, #2a1a0d);">
@@ -168,8 +178,8 @@
           </div>
         </a>
 
-        <!-- Project 5: Bioreactor Control System -->
-        <a href="project-bioreactor.html" class="glass-card project-card reveal">
+        <!-- Project 7: Bioreactor Control System -->
+        <a href="projects/bioreactor.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #2b3d1b, #1a2a0d);">
@@ -187,8 +197,8 @@
           </div>
         </a>
 
-        <!-- Project 6: Line Follower Robot -->
-        <a href="project-line-follower.html" class="glass-card project-card reveal">
+        <!-- Project 8: Line Follower Robot -->
+        <a href="projects/line-follower.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #3d1b3d, #2a0d2a);">
@@ -206,8 +216,8 @@
           </div>
         </a>
 
-        <!-- Project 7: Sumo Robot -->
-        <a href="project-sumo-robot.html" class="glass-card project-card reveal">
+        <!-- Project 9: Sumo Robot -->
+        <a href="projects/sumo-robot.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #1b1b3d, #0d0d2a);">

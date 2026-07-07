@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Agni Miftah Fauzi – Electrical Engineering graduate with strong foundation in software development, Flutter, FastAPI, and AI. Based in Bandung, Indonesia.">
-  <title>Agni Miftah Fauzi | Electrical Engineering & Software Developer</title>
+  <meta name="description" content="Agni Miftah Fauzi – AI Specialist & Automation Engineer specializing in Prompt Engineering, Claude API integration, and workflow automation. Based in Bandung, Indonesia.">
+  <title>Agni Miftah Fauzi | AI Specialist & Automation Engineer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Agni Miftah Fauzi | AI Specialist & Automation Engineer">
+  <meta property="og:description" content="AI Specialist specializing in Prompt Engineering, Claude API integration, and workflow automation. Based in Bandung, Indonesia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atapdigital.id">
+  <meta property="og:image" content="https://atapdigital.id/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agni Miftah Fauzi | AI Specialist & Automation Engineer">
+  <meta name="twitter:description" content="AI Specialist specializing in Prompt Engineering, Claude API integration, and workflow automation.">
+  <meta name="twitter:image" content="https://atapdigital.id/og-image.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +32,14 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body class="page-transition">
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="theme-toggle-icon">🌙</span>
+  </button>
 
   <!-- ═══════════════════════════════════════════
        NAVIGATION
@@ -62,11 +86,11 @@
           <span class="text-gradient">Fauzi</span>
         </h1>
 
-        <p class="hero-role text-gradient">Electrical Engineering & Software Developer</p>
+        <p class="hero-role text-gradient">AI Specialist & Automation Engineer</p>
 
         <p class="hero-tagline">
-          Building modern applications with Flutter, FastAPI, and AI.
-          Passionate about creating solutions that merge software expertise with technical knowledge.
+          Building AI-powered workflows, prompt engineering, and automation pipelines.
+          Passionate about turning repetitive tasks into efficient, scalable systems.
         </p>
 
         <div class="hero-cta">
@@ -101,25 +125,25 @@
 
         <div class="about-preview-text reveal-right">
           <div class="section-label">About Me</div>
-          <h3>Electrical Engineering graduate passionate about software development</h3>
+          <h3>AI Specialist passionate about automation & efficiency</h3>
           <p>
-            Fresh graduate with a 3.62/4.00 GPA from UIN Sunan Gunung Djati Bandung.
-            Strong foundation in software development with hands-on experience in mobile development (Flutter),
-            backend APIs (FastAPI), and AI integration (YOLOv8, OCR).
+            AI Specialist with hands-on experience in <strong>Prompt Engineering</strong>, <strong>Claude API</strong> integration,
+            and <strong>automation pipelines</strong>. Skilled in building AI-powered workflows that scale research,
+            automate repetitive tasks, and deliver reliable, validated outputs.
           </p>
 
           <div class="about-highlights">
             <div class="about-highlight-item">
-              <div class="icon">🎓</div>
-              <span>Electrical Engineering, GPA 3.62/4.00</span>
-            </div>
-            <div class="about-highlight-item">
-              <div class="icon">📱</div>
-              <span>Flutter & FastAPI Developer</span>
-            </div>
-            <div class="about-highlight-item">
               <div class="icon">🤖</div>
-              <span>AI & Machine Learning Enthusiast</span>
+              <span>Prompt Engineering & Claude Integration</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon">⚡</div>
+              <span>Automation Pipeline Development</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon">📊</div>
+              <span>Data Processing & Quality Assurance</span>
             </div>
           </div>
 
@@ -145,7 +169,7 @@
       <div class="featured-projects-grid" data-stagger>
 
         <!-- Project Card 1 - PromptCraft -->
-        <a href="project-promptcraft.html" class="glass-card project-card reveal">
+        <a href="projects/promptcraft.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
@@ -164,7 +188,7 @@
         </a>
 
         <!-- Project Card 2 - AtapDigital AI -->
-        <a href="project-atapdigital-ai.html" class="glass-card project-card reveal">
+        <a href="projects/atapdigital-ai.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #10b981, #059669);">
@@ -183,7 +207,7 @@
         </a>
 
         <!-- Project Card 3 - Finance App -->
-        <a href="project-detail.html" class="glass-card project-card reveal">
+        <a href="projects/finance-app.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3a5f, #0d1b2a);">
@@ -201,8 +225,8 @@
           </div>
         </a>
 
-        <!-- Project Card 2 - RF Harvesting -->
-        <a href="project-rf-harvesting.html" class="glass-card project-card reveal">
+        <!-- Project Card 4 - RF Harvesting -->
+        <a href="projects/rf-harvesting.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #2d1b4e, #1a0a2e);">
@@ -220,8 +244,8 @@
           </div>
         </a>
 
-        <!-- Project Card 3 - Weather RNN -->
-        <a href="project-weather-rnn.html" class="glass-card project-card reveal">
+        <!-- Project Card 5 - Weather RNN -->
+        <a href="projects/weather-rnn.html" class="glass-card project-card reveal">
           <div class="glass-reflection"></div>
           <div class="project-card-image">
             <div class="project-placeholder" style="background: linear-gradient(135deg, #1b3d3f, #0a2021);">
@@ -308,30 +332,30 @@
       <div class="skills-preview-grid" data-stagger>
         <div class="glass-card skill-preview-card reveal">
           <div class="glass-reflection"></div>
-          <div class="skill-preview-icon">📱</div>
-          <h3>Mobile Development</h3>
-          <p>Flutter, Dart, State Management, API Integration, CRUD</p>
-        </div>
-
-        <div class="glass-card skill-preview-card reveal">
-          <div class="glass-reflection"></div>
-          <div class="skill-preview-icon">⚙️</div>
-          <h3>Backend Development</h3>
-          <p>FastAPI, REST API, SQLite, Python</p>
-        </div>
-
-        <div class="glass-card skill-preview-card reveal">
-          <div class="glass-reflection"></div>
           <div class="skill-preview-icon">🤖</div>
-          <h3>AI & Machine Learning</h3>
-          <p>YOLOv8, EasyOCR, RNN, Model Evaluation</p>
+          <h3>AI & Prompt Engineering</h3>
+          <p>Claude API, Prompt Design, Output Validation, AI Workflows</p>
         </div>
 
         <div class="glass-card skill-preview-card reveal">
           <div class="glass-reflection"></div>
-          <div class="skill-preview-icon">🔧</div>
-          <h3>Technical Support</h3>
-          <p>Hardware Troubleshooting, OS Installation, System Optimization</p>
+          <div class="skill-preview-icon">⚡</div>
+          <h3>Automation & Scripts</h3>
+          <p>Python Automation, API Integration, Workflow Pipelines</p>
+        </div>
+
+        <div class="glass-card skill-preview-card reveal">
+          <div class="glass-reflection"></div>
+          <div class="skill-preview-icon">🌐</div>
+          <h3>Backend Development</h3>
+          <p>FastAPI, Flask, REST APIs, SQLite, Python</p>
+        </div>
+
+        <div class="glass-card skill-preview-card reveal">
+          <div class="glass-reflection"></div>
+          <div class="skill-preview-icon">🔍</div>
+          <h3>Quality Assurance</h3>
+          <p>Output Validation, Error Handling, Testing & Documentation</p>
         </div>
       </div>
     </div>
@@ -345,9 +369,9 @@
       <div class="contact-cta-content reveal">
         <div class="section-label">Get In Touch</div>
         <h2>Interested in working together?</h2>
-        <p>I'm open to entry-level roles in Backend/Frontend Development, Mobile Application, Quality Assurance, or IT Support.</p>
+        <p>Open to AI Specialist, Prompt Engineer, or Automation Engineer roles. Let's build something great together!</p>
         <a href="contact.html" class="btn btn-primary">
-          Contact Me
+          Get In Touch
           <span>→</span>
         </a>
       </div>

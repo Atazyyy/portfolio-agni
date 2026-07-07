@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PromptCraft – Interactive learning platform for Prompt Engineering with 12 lessons, 60+ quizzes, and prompt playground.">
-  <title>PromptCraft | Agni Miftah Fauzi</title>
+  <meta name="description" content="Personal Finance App with Receipt Recognition – Flutter mobile app with YOLOv8 and FastAPI backend.">
+  <title>Personal Finance App | Agni Miftah Fauzi</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pages.css">
 </head>
 <body class="page-transition">
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="theme-toggle-icon">🌙</span>
+  </button>
 
   <!-- NAVIGATION -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="nav-logo">agni<span class="accent-dot">.</span>dev</a>
+      <a href="../index.html" class="nav-logo">agni<span class="accent-dot">.</span>dev</a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html" class="active">Projects</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../contact.html">Contact</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -35,19 +45,19 @@
   <!-- PROJECT HERO -->
   <section class="section project-hero">
     <div class="container">
-      <a href="projects.html" class="back-link">
+      <a href="../projects.html" class="back-link">
         <span>←</span> Back to Projects
       </a>
 
       <div class="project-hero-content">
-        <div class="project-icon-lg" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
-          🎨
+        <div class="project-icon-lg" style="background: linear-gradient(135deg, #1e3a5f, #0d1b2a);">
+          📱
         </div>
-        <h1 class="project-title">PromptCraft</h1>
-        <p class="project-subtitle">Interactive Prompt Engineering Learning Platform</p>
+        <h1 class="project-title">Personal Finance App</h1>
+        <p class="project-subtitle">Receipt Recognition with YOLOv8 & FastAPI</p>
 
         <div class="project-links">
-          <a href="https://github.com/Atazyyy/PromptCraft" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <a href="https://github.com/Atazyyy/finance-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
@@ -69,11 +79,9 @@
           <div class="glass-card project-section">
             <h2>📖 Overview</h2>
             <p>
-              PromptCraft adalah platform pembelajaran interaktif yang membantu menguasai <strong>Prompt Engineering</strong> —
-              seni menyusun instruksi yang efektif untuk AI seperti Claude, GPT, dan Gemini.
-            </p>
-            <p>
-              Ditampilkan dalam pengalaman belajar yang interaktif dengan lessons, quiz, dan playground untuk latihan langsung.
+              A Flutter-based personal finance tracking mobile application with automated receipt recognition using
+              <strong>YOLOv8</strong> object detection and <strong>EasyOCR</strong>. The app features a <strong>FastAPI</strong> backend
+              with SQLite database, providing an offline-first system architecture.
             </p>
           </div>
 
@@ -81,45 +89,38 @@
             <h2>✨ Features</h2>
             <ul class="feature-list">
               <li>
-                <strong>12 Interactive Lessons</strong>
-                <p>Penjelasan materi dari dasar hingga lanjutan dengan contoh Good vs Bad prompts</p>
+                <strong>Automated Receipt Recognition</strong>
+                <p>Using YOLOv8 object detection for accurate receipt localization</p>
               </li>
               <li>
-                <strong>60+ Quiz Questions</strong>
-                <p>5 pertanyaan per lesson dengan instant feedback dan evaluasi otomatis</p>
+                <strong>OCR Text Extraction</strong>
+                <p>EasyOCR for extracting text from receipt images</p>
               </li>
               <li>
-                <strong>Prompt Playground</strong>
-                <p>15+ templates siap pakai dengan fitur save, load, dan copy ke clipboard</p>
+                <strong>FastAPI Backend</strong>
+                <p>REST API architecture with Python backend</p>
               </li>
               <li>
-                <strong>Gamification System</strong>
-                <p>XP system, streak counter, dan 12 achievements untuk menjaga motivasi</p>
+                <strong>Offline-First Architecture</strong>
+                <p>SQLite database for local data persistence</p>
               </li>
               <li>
-                <strong>Dark Theme Design</strong>
-                <p>Smooth animations dengan Framer Motion, responsive untuk semua device</p>
+                <strong>Expense Categorization</strong>
+                <p>Automatic categorization and tracking of expenses</p>
               </li>
             </ul>
           </div>
 
           <div class="glass-card project-section">
-            <h2>📚 Lessons Overview</h2>
-            <div class="lessons-grid">
-              <div class="lesson-item">
-                <span class="lesson-num">1-4</span>
-                <span class="lesson-level level-beginner">Beginner</span>
-                <span>Fundamentals & Basics</span>
+            <h2>📊 Results</h2>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <span class="metric-value">87%</span>
+                <span class="metric-label">mAP50 Detection Accuracy</span>
               </div>
-              <div class="lesson-item">
-                <span class="lesson-num">5-10</span>
-                <span class="lesson-level level-intermediate">Intermediate</span>
-                <span>Advanced Techniques</span>
-              </div>
-              <div class="lesson-item">
-                <span class="lesson-num">11-12</span>
-                <span class="lesson-level level-advanced">Advanced</span>
-                <span>Patterns & Library Building</span>
+              <div class="metric-card">
+                <span class="metric-value">84</span>
+                <span class="metric-label">SUS Usability Score</span>
               </div>
             </div>
           </div>
@@ -128,45 +129,26 @@
             <h2>🛠 Tech Stack</h2>
             <div class="tech-grid">
               <div class="tech-item">
-                <span class="tech-icon">⚛️</span>
-                <span>React 18</span>
+                <span class="tech-icon">📱</span>
+                <span>Flutter</span>
               </div>
               <div class="tech-item">
-                <span class="tech-icon">🔷</span>
-                <span>TypeScript</span>
+                <span class="tech-icon">🐍</span>
+                <span>FastAPI</span>
               </div>
               <div class="tech-item">
-                <span class="tech-icon">⚡</span>
-                <span>Vite</span>
+                <span class="tech-icon">🤖</span>
+                <span>YOLOv8</span>
               </div>
               <div class="tech-item">
-                <span class="tech-icon">🎨</span>
-                <span>Tailwind CSS</span>
+                <span class="tech-icon">👁</span>
+                <span>EasyOCR</span>
               </div>
               <div class="tech-item">
-                <span class="tech-icon">✨</span>
-                <span>Framer Motion</span>
-              </div>
-              <div class="tech-item">
-                <span class="tech-icon">📜</span>
-                <span>React Router</span>
-              </div>
-              <div class="tech-item">
-                <span class="tech-icon">💾</span>
-                <span>localStorage</span>
+                <span class="tech-icon">🗄</span>
+                <span>SQLite</span>
               </div>
             </div>
-          </div>
-
-          <div class="glass-card project-section">
-            <h2>🎓 What I Learned</h2>
-            <ul class="learn-list">
-              <li>React + TypeScript integration untuk type safety</li>
-              <li>State Management dengan React Context + useReducer</li>
-              <li>Gamification design (XP, streaks, achievements)</li>
-              <li>UI/UX design system yang konsisten</li>
-              <li>Content creation untuk materi edukasi</li>
-            </ul>
           </div>
 
         </div>
@@ -179,27 +161,19 @@
             <div class="info-list">
               <div class="info-item">
                 <span class="info-label">Status</span>
-                <span class="info-value status-completed">✅ Completed</span>
+                <span class="info-value">🔄 In Progress</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Stack</span>
-                <span class="info-value">React, TS, Tailwind</span>
+                <span class="info-label">Type</span>
+                <span class="info-value">Mobile App</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Lessons</span>
-                <span class="info-value">12 Interactive</span>
+                <span class="info-label">Role</span>
+                <span class="info-value">Full-stack</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Quiz</span>
-                <span class="info-value">60+ Questions</span>
-              </div>
-              <div class="info-item">
-                <span class="info-label">Templates</span>
-                <span class="info-value">15+ Ready-to-use</span>
-              </div>
-              <div class="info-item">
-                <span class="info-label">Deploy</span>
-                <span class="info-value">Vercel</span>
+                <span class="info-label">Accuracy</span>
+                <span class="info-value" style="color: #10B981;">87% mAP50</span>
               </div>
             </div>
           </div>
@@ -207,24 +181,12 @@
           <div class="glass-card sidebar-card">
             <h3>Categories</h3>
             <div class="tags-container">
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag">Framer Motion</span>
-              <span class="tag">Education</span>
-              <span class="tag">Gamification</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">YOLOv8</span>
+              <span class="tag">OCR</span>
+              <span class="tag">SQLite</span>
             </div>
-          </div>
-
-          <div class="glass-card sidebar-card">
-            <h3>Use Cases</h3>
-            <ul class="use-cases">
-              <li>📱 Social Media captions & hashtags</li>
-              <li>📧 Business emails & proposals</li>
-              <li>✍️ Blog posts & content</li>
-              <li>📊 Competitor research</li>
-              <li>📚 Course outline generation</li>
-            </ul>
           </div>
 
         </div>
@@ -239,14 +201,14 @@
       <div class="footer-content">
         <div class="footer-logo">agni<span class="text-accent">.</span>dev</div>
         <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="experience.html">Experience</a>
-          <a href="contact.html">Contact</a>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../contact.html">Contact</a>
         </div>
         <div class="footer-social">
-          <a href="https://github.com/agnimiftah" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Atazyyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
@@ -268,6 +230,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
