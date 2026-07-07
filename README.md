@@ -94,7 +94,7 @@ Mobile application with automated receipt recognition using YOLOv8 and EasyOCR.
 | 📧 Email | agnimiftahfauza@gmail.com |
 | 📱 Phone | +62 851-5689-3004 |
 | 💻 GitHub | [github.com/Atazyyy](https://github.com/Atazyyy) |
-| 💼 LinkedIn | [linkedin.com/in/agnimiftah](https://linkedin.com/in/agnimiftah) |
+| 💼 LinkedIn | [linkedin.com/in/agnimiftah](https://www.linkedin.com/in/agni-miftah-fauzi) |
 | 📍 Location | Bandung, Indonesia |
 
 ## ✨ Features
