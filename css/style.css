@@ -8,6 +8,10 @@
 
 /* ── Design Tokens ── */
 :root {
+  /* Typography - with web-safe fallbacks */
+  --font-heading: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
   /* Colors - Dark Theme (default) */
   --bg-primary: #0B0B0F;
   --bg-secondary: #101018;
@@ -44,11 +48,14 @@
   --light-accent-glow: rgba(2, 132, 199, 0.1);
 }
 
-  /* Typography */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+/* ── Typography Variables ── */
+:root {
+  --font-heading: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
-  /* Spacing */
+/* ── Spacing & Other Variables ── */
+:root {
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
@@ -58,24 +65,20 @@
   --space-3xl: 64px;
   --space-4xl: 96px;
 
-  /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Shadows */
   --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
   --shadow-glass-hover: 0 16px 48px rgba(0, 0, 0, 0.4);
   --shadow-accent: 0 4px 24px var(--accent-glow);
 
-  /* Layout */
   --container-max: 1200px;
   --nav-height: 72px;
 }
