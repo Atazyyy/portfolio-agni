@@ -51,10 +51,10 @@
 
       <div class="project-hero-content">
         <div class="project-hero-image">
-          <img src="../images/finance-app/hero.png" alt="Personal Finance App">
+          <img src="../images/finance-app/hero.png" alt="Caku Finance - Personal Finance Tracker">
         </div>
-        <h1 class="project-title">Personal Finance App</h1>
-        <p class="project-subtitle">Receipt Recognition with YOLOv8 & FastAPI</p>
+        <h1 class="project-title">Caku Finance</h1>
+        <p class="project-subtitle">Personal Finance Tracker with Receipt OCR</p>
 
         <div class="project-links">
           <a href="https://github.com/Atazyyy/finance-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
@@ -79,9 +79,13 @@
           <div class="glass-card project-section">
             <h2>📖 Overview</h2>
             <p>
-              A Flutter-based personal finance tracking mobile application with automated receipt recognition using
-              <strong>YOLOv8</strong> object detection and <strong>EasyOCR</strong>. The app features a <strong>FastAPI</strong> backend
-              with SQLite database, providing an offline-first system architecture.
+              <strong>Caku Finance</strong> is a personal finance tracking mobile application that simplifies expense management
+              through automated receipt scanning. Using <strong>YOLOv8</strong> for receipt detection and <strong>EasyOCR</strong>
+              for text extraction, users can quickly scan receipts and automatically categorize expenses.
+            </p>
+            <p>
+              Features include expense/income tracking, visual pie chart reports, customizable categories,
+              PIN security, and data backup. Built with <strong>Flutter</strong> frontend and <strong>FastAPI</strong> backend.
             </p>
           </div>
 
@@ -89,26 +93,61 @@
             <h2>✨ Features</h2>
             <ul class="feature-list">
               <li>
-                <strong>Automated Receipt Recognition</strong>
-                <p>Using YOLOv8 object detection for accurate receipt localization</p>
+                <strong>OCR Receipt Scanning</strong>
+                <p>Scan receipts with camera - YOLOv8 detects receipt region, EasyOCR extracts text automatically</p>
               </li>
               <li>
-                <strong>OCR Text Extraction</strong>
-                <p>EasyOCR for extracting text from receipt images</p>
+                <strong>Expense & Income Tracking</strong>
+                <p>Track spending and income with total balance overview</p>
               </li>
               <li>
-                <strong>FastAPI Backend</strong>
-                <p>REST API architecture with Python backend</p>
+                <strong>Visual Reports</strong>
+                <p>Pie chart visualization showing expense breakdown by category (Tagihan, Makanan, Transport, Hiburan, Kesehatan)</p>
               </li>
               <li>
-                <strong>Offline-First Architecture</strong>
-                <p>SQLite database for local data persistence</p>
+                <strong>Custom Categories</strong>
+                <p>Add and manage expense categories with colorful icons</p>
               </li>
               <li>
-                <strong>Expense Categorization</strong>
-                <p>Automatic categorization and tracking of expenses</p>
+                <strong>Search & Filter</strong>
+                <p>Find transactions easily with search and filter functionality</p>
+              </li>
+              <li>
+                <strong>Security & Backup</strong>
+                <p>PIN protection and database backup to Documents folder</p>
               </li>
             </ul>
+          </div>
+
+          <div class="glass-card project-section">
+            <h2>🖼️ App Screenshots</h2>
+            <p>See how Caku Finance works:</p>
+            <div class="screenshots-gallery">
+              <div class="screenshot-item">
+                <img src="../images/finance-app/screenshots/05.jpg" alt="Caku Finance Home" loading="lazy">
+                <span class="screenshot-label">Dashboard - Total Balance</span>
+              </div>
+              <div class="screenshot-item">
+                <img src="../images/finance-app/screenshots/01.jpg" alt="Caku Finance Reports" loading="lazy">
+                <span class="screenshot-label">Financial Report - Expense Pie Chart</span>
+              </div>
+              <div class="screenshot-item">
+                <img src="../images/finance-app/screenshots/04.jpg" alt="Caku Finance Add Transaction" loading="lazy">
+                <span class="screenshot-label">Add Transaction - Scan or Manual</span>
+              </div>
+              <div class="screenshot-item">
+                <img src="../images/finance-app/screenshots/03.jpg" alt="Caku Finance OCR Scanner" loading="lazy">
+                <span class="screenshot-label">OCR Scanner - Receipt Detection</span>
+              </div>
+              <div class="screenshot-item">
+                <img src="../images/finance-app/screenshots/02.jpg" alt="Caku Finance OCR Results" loading="lazy">
+                <span class="screenshot-label">OCR Results - Extracted Data</span>
+              </div>
+              <div class="screenshot-item">
+                <img src="../images/finance-app/screenshots/09.jpg" alt="Caku Finance Settings" loading="lazy">
+                <span class="screenshot-label">Settings - Categories, PIN, Backup</span>
+              </div>
+            </div>
           </div>
 
           <div class="glass-card project-section">
