@@ -12,42 +12,6 @@
   padding-top: var(--nav-height);
 }
 
-/* Animated Grid Pattern */
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 70%);
-  z-index: 0;
-  animation: gridPulse 8s ease-in-out infinite;
-}
-
-@keyframes gridPulse {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.02); }
-}
-
-/* Animated grid lines */
-.hero-grid::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(167, 139, 250, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(167, 139, 250, 0.02) 1px, transparent 1px);
-  background-size: 120px 120px;
-  animation: gridMove 20s linear infinite;
-}
-
-@keyframes gridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(120px, 120px); }
-}
-
 /* Ambient glow effects */
 .hero::before {
   content: '';
@@ -56,11 +20,11 @@
   left: 5%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(129, 140, 248, 0.06) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(80px);
   z-index: 0;
-  animation: float-slow 20s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero::after {
@@ -70,11 +34,11 @@
   right: 10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.1) 0%, rgba(129, 140, 248, 0.05) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(70px);
   z-index: 0;
-  animation: float-slow 25s ease-in-out infinite reverse;
+  pointer-events: none;
 }
 
 @keyframes float-slow {

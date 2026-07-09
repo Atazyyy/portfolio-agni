@@ -129,29 +129,18 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
   }
 
-  // ── GLASS CARD REFLECTION - Enhanced ──
+  // ── GLASS CARD REFLECTION - Simple ──
   const glassCards = document.querySelectorAll('.glass-card');
 
   glassCards.forEach(card => {
     const reflection = card.querySelector('.glass-reflection');
     if (!reflection) return;
 
-    // Throttled mousemove for performance
-    let ticking = false;
     card.addEventListener('mousemove', (e) => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const xPercent = (x / rect.width) * 100;
-          const yPercent = (y / rect.height) * 100;
-
-          reflection.style.background = `radial-gradient(circle 300px at ${xPercent}% ${yPercent}%, rgba(255,255,255,0.08) 0%, transparent 100%)`;
-          ticking = false;
-        });
-        ticking = true;
-      }
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      reflection.style.background = `radial-gradient(circle 250px at ${x}% ${y}%, rgba(255,255,255,0.06) 0%, transparent 100%)`;
     });
 
     card.addEventListener('mouseleave', () => {
