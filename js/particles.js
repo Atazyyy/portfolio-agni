@@ -1,7 +1,7 @@
 /* ============================================
-   PARTICLES.JS – Lightweight Canvas Particles
+   PARTICLES.JS – Enhanced Glassmorphism Plus
    Floating dots with connections, parallax
-   Only renders on elements with .hero-canvas
+   Gradient orbs, optimized performance
    ============================================ */
 
 (function () {
@@ -16,19 +16,26 @@
   let mouseX = 0;
   let mouseY = 0;
   let width, height;
+  let time = 0;
 
-  // Configuration
+  // Configuration - Enhanced
   const config = {
-    particleCount: 60,
-    connectionDistance: 140,
-    particleRadius: { min: 1, max: 2.5 },
-    speed: { min: 0.15, max: 0.5 },
-    color: '56, 189, 248',       // accent color RGB
-    colorAlt: '129, 140, 248',   // secondary accent RGB
-    parallaxStrength: 0.02,
-    connectionOpacity: 0.08,
-    particleOpacity: { min: 0.15, max: 0.5 },
+    particleCount: 70,
+    connectionDistance: 150,
+    particleRadius: { min: 1.2, max: 2.8 },
+    speed: { min: 0.12, max: 0.45 },
+    color: '56, 189, 248',       // accent cyan RGB
+    colorAlt: '167, 139, 250',    // accent violet RGB
+    parallaxStrength: 0.015,
+    connectionOpacity: 0.06,
+    particleOpacity: { min: 0.12, max: 0.45 },
+    // Ambient orbs
+    orbCount: 3,
+    orbRadius: { min: 200, max: 350 },
   };
+
+  // Orbs array
+  let orbs = [];
 
   // Resize handler
   function resize() {
@@ -36,14 +43,41 @@
     height = canvas.parentElement.offsetHeight;
     canvas.width = width * window.devicePixelRatio;
     canvas.height = height * window.devicePixelRatio;
-    canvas.style.width = width + 'px';
-    canvas.style.height = height + 'px';
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+
+  // Create orb
+  function createOrb(index) {
+    const radius = config.orbRadius.min + Math.random() * (config.orbRadius.max - config.orbRadius.min);
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      baseX: 0,
+      baseY: 0,
+      radius: radius,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      color: index % 2 === 0 ? config.color : config.colorAlt,
+      opacity: 0.03 + Math.random() * 0.02,
+      pulseSpeed: 0.0005 + Math.random() * 0.0005,
+      pulsePhase: Math.random() * Math.PI * 2,
+    };
+  }
+
+  // Initialize orbs
+  function initOrbs() {
+    orbs = [];
+    for (let i = 0; i < config.orbCount; i++) {
+      const orb = createOrb(i);
+      orb.baseX = orb.x;
+      orb.baseY = orb.y;
+      orbs.push(orb);
+    }
   }
 
   // Create particle
   function createParticle() {
-    const isAlt = Math.random() > 0.7;
+    const isAlt = Math.random() > 0.75;
     return {
       x: Math.random() * width,
       y: Math.random() * height,
@@ -52,7 +86,7 @@
       radius: config.particleRadius.min + Math.random() * (config.particleRadius.max - config.particleRadius.min),
       opacity: config.particleOpacity.min + Math.random() * (config.particleOpacity.max - config.particleOpacity.min),
       color: isAlt ? config.colorAlt : config.color,
-      pulseSpeed: 0.01 + Math.random() * 0.02,
+      pulseSpeed: 0.008 + Math.random() * 0.015,
       pulsePhase: Math.random() * Math.PI * 2,
     };
   }
@@ -61,10 +95,11 @@
   function init() {
     resize();
     particles = [];
+    initOrbs();
 
     // Adjust count based on screen size for performance
-    const count = width < 768 ? Math.floor(config.particleCount * 0.4)
-                  : width < 1024 ? Math.floor(config.particleCount * 0.7)
+    const count = width < 768 ? Math.floor(config.particleCount * 0.35)
+                  : width < 1024 ? Math.floor(config.particleCount * 0.65)
                   : config.particleCount;
 
     for (let i = 0; i < count; i++) {
@@ -72,11 +107,52 @@
     }
   }
 
+  // Draw orb
+  function drawOrb(orb) {
+    const pulse = Math.sin(time * orb.pulseSpeed * 60 + orb.pulsePhase) * 0.3 + 0.7;
+    const gradient = ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.radius);
+    gradient.addColorStop(0, `rgba(${orb.color}, ${orb.opacity * pulse})`);
+    gradient.addColorStop(0.5, `rgba(${orb.color}, ${orb.opacity * pulse * 0.5})`);
+    gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+    ctx.beginPath();
+    ctx.arc(orb.x, orb.y, orb.radius, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+  }
+
+  // Update orb position
+  function updateOrb(orb) {
+    orb.x += orb.vx;
+    orb.y += orb.vy;
+
+    // Slow drift with mouse influence
+    const dx = mouseX - orb.x;
+    const dy = mouseY - orb.y;
+    orb.vx += dx * 0.00001;
+    orb.vy += dy * 0.00001;
+
+    // Dampen
+    orb.vx *= 0.999;
+    orb.vy *= 0.999;
+
+    // Wrap
+    if (orb.x < -orb.radius) orb.x = width + orb.radius;
+    if (orb.x > width + orb.radius) orb.x = -orb.radius;
+    if (orb.y < -orb.radius) orb.y = height + orb.radius;
+    if (orb.y > height + orb.radius) orb.y = -orb.radius;
+  }
+
   // Animation loop
   function animate() {
     ctx.clearRect(0, 0, width, height);
+    time = Date.now() * 0.001;
 
-    const time = Date.now() * 0.001;
+    // Draw and update orbs
+    orbs.forEach(orb => {
+      updateOrb(orb);
+      drawOrb(orb);
+    });
 
     // Update and draw particles
     for (let i = 0; i < particles.length; i++) {
@@ -97,11 +173,16 @@
       if (p.y > height + 10) p.y = -10;
 
       // Pulse opacity
-      const pulse = Math.sin(time * p.pulseSpeed * 60 + p.pulsePhase) * 0.15 + 0.85;
+      const pulse = Math.sin(time * p.pulseSpeed * 60 + p.pulsePhase) * 0.2 + 0.8;
       const drawX = p.x + parallaxX;
       const drawY = p.y + parallaxY;
 
-      // Draw particle
+      // Draw particle with glow
+      ctx.beginPath();
+      ctx.arc(drawX, drawY, p.radius * 2, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${p.color}, ${p.opacity * pulse * 0.2})`;
+      ctx.fill();
+
       ctx.beginPath();
       ctx.arc(drawX, drawY, p.radius, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(${p.color}, ${p.opacity * pulse})`;
