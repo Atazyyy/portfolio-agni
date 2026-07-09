@@ -239,14 +239,15 @@ input, textarea {
   align-items: center;
   transition: all var(--transition-smooth);
   border-bottom: 1px solid transparent;
+  background: transparent;
 }
 
 .navbar.scrolled {
-  background: rgba(6, 8, 12, 0.75);
+  background: rgba(6, 8, 12, 0.85);
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   border-bottom-color: var(--glass-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .container {
@@ -668,7 +669,7 @@ input, textarea {
   height: 3px;
   background: var(--gradient-accent);
   width: 0%;
-  z-index: 9999;
+  z-index: 1001;
   transition: width 0.1s linear;
   box-shadow: 0 0 10px var(--accent);
 }
